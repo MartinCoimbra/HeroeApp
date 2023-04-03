@@ -13,7 +13,7 @@
       <mat-divider></mat-divider>
       <br />
       <!-- con el pipe "buscamos la imagen" y si no hay no ponemos img -->
-      <img [src]="heroe | images" />
+      <img width="500" [src]="heroe | images" />
     </div>
 
     <div fxFlex="50">
@@ -23,7 +23,8 @@
         <mat-list-item> {{heroe.first_appearance}} </mat-list-item>
         <mat-list-item> {{heroe.characters}} </mat-list-item>
         <mat-list-item> {{heroe.publisher}} </mat-list-item>
-        <mat-list-item> {{heroe.alter_ego} } </mat-list-item>
+        <mat-list-item> {{heroe.alter_ego}} </mat-list-item>
+        <mat-list-item>JSON: {{heroe | json}} </mat-list-item>
       </mat-list>
       <br>
       <button mat-button (click)="regresar()" color="warn">
